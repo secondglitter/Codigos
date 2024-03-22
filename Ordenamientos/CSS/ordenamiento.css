@@ -1,0 +1,36 @@
+
+
+.container{
+    margin-left: 100px;
+    margin-right: 50px;
+    border: 1px solid #fff;
+    padding: 50px;
+    margin-top: 80px;
+    
+}
+body {
+    background-image: url(../images/calavera-espacio.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #fff;
+   animation: starsAnimation 30s linear infinite;
+}
+@keyframes starsAnimation {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+.arreglo{
+    background-color: 100px black;
+    text-align: center;
+    color: #fff;
+}
+h1{
+    padding: 50px;
+    margin-top: 30px;
+    text-align: center;
+}

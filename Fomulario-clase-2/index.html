@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" type="text/css" href="CSS/principal.css">
+</head>
+
+<body>
+    <section>
+        <div id="izquierdo">
+            <h1>Pollito Campero APP</h1>
+            <p>Los mejores pollos asados a adomicilio</p>
+            <p>Crea tu cuenta y disfruta de tus pollitos camperos</p>
+            <img src="images/pollo.jpg" id="foto">
+        </div>
+
+        <div id="derecho">
+            <form action="#" method="#">
+                <label>Nombre completo</label>
+                <!-- Agregar Nombre-->
+                <input type="text" name="nombre_completo" value="" placeholder="Ingresa tu nombre" required>
+                <!-- Agregar email-->
+                <label>Correo electronico</label>
+                <input type="email" name="Correo_electronico" value="" placeholder="Ingresa tu correo" required>
+                <!-- Agregar fecha-->
+                <label>Fecha</label>
+                <input type="date" name="Fecha" value="" placeholder="dd/mm/aaaa" required>
+                <!-- Agregar edad-->
+                <label>Edad</label>
+                <input type="number" value="edad">
+                <!-- Agregar hoa-->
+                <label>Hora</label>
+                <input type="time" value="hora">
+                <!-- Agregar archivo-->
+                <input type="file" value="archivo">
+                <!-- Agregar un campo de color-->
+                <input type="color" value="colores">
+                <!-- Agregar um campo de seleccion unico-->
+                <label>Selecciona tu genero</label>
+                <input type="radio" value="Hombre" name="genero">Hombre
+                <input type="radio" value="Mujer" name="genero">Mujer
+                <input type="radio" value="Mono" name="genero">Mono
+                <!-- Agregar um campo de seleccion multiple-->
+                <label>Selecciona los tipos de pollos que te gustan</label>
+                <input type="checkbox" name="gustos" value="asados">asados
+                <input type="checkbox" name="gustos" value="camperos">Camperos
+                <input type="checkbox" name="gustos" values="rostizados">Rostizados
+                <!-- Agregar una lista de opciones-->
+                <label>Selecciona tu sucursal</label>
+                <select name="sucursales">
+                    <option value="Portillo">Portillo</option>
+                    <option value="Americas">Plaza las americas</option>
+                    <option value="Villas Otoch">Villas Otoch</option>
+                    <option value="Otros">Otros</option>
+                </select>
+                <input list="complementos" id="extra">
+                <datalist id="complementos">
+                    <option value="Arroz">Arroz</option>
+                    <option value="salsa">Salsa</option>
+                    <option value="cebolla">Cebolla Asada</option>
+                    <option value="na">Ninguna</option>
+                </datalist>
+                <!-- botones-->
+                <input id=boton type="submit" value="Ingresar">
+                <button type="reset">Limpiar campos</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+
+</html>

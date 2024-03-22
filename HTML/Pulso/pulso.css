@@ -1,0 +1,52 @@
+:root {
+    --bg: #333;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background: var(--bg);
+    display: grid;
+    place-items: center;
+}
+
+span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: var(--c1);
+    border-radius: 50%;
+    cursor: pointer;
+    animation: 
+        anim 2s var(--d) ease-out infinite;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px
+}
+
+@keyframes anim {
+    0% {
+        box-shadow: 
+            0 0 8px 6px #1affb300,
+            0 0 0px 0px var(--bg),
+            0 0 0px 0px #1affb300;
+    }
+
+    10% {
+        box-shadow: 
+            0 0 8px 6px var(--c2),
+            0 0 12px 10px var(--bg),
+            0 0 12px 14px var(--c2);
+    }
+
+    100% {
+        box-shadow: 
+            0 0 8px 6px #1affb300,
+            0 0 0px 40px var(--bg),
+            0 0 0px 40px #1affb300;
+    }
+}

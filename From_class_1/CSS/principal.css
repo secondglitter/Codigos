@@ -1,0 +1,127 @@
+/* Este es un comentario
+
+ELEMENTO {
+    atributo : valor ;
+}
+--------------------------------------------------
+3 formas de agregar estilo a un elemento de html
+
+1- Por etiquetas
+*/
+  @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+  
+*{
+    margin: auto;
+}
+
+body{
+    font-family: 'Rubik', sans-serif;
+}
+
+header {
+    background-color: rgb(141, 164, 65);
+    width: 80%;
+    height: 100px;
+    color: #ffffff;
+    text-align: center;
+}
+
+header h1 {
+    padding-top: 20px;
+}
+
+nav {
+    background-color: rgb(74, 71, 71);
+    width: 80%;
+    height: 60px;
+    text-align: center;
+}
+nav a {
+    color: #ffffff;
+    font-size: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+nav ul {
+    padding-top: 5px;
+}
+nav ul li{
+    display: inline;
+    /*padding: TOP RIGTH BOTTOM LEFT */
+    padding: 5px 15px 5px 15px
+}
+nav a:hover{
+    color:black;
+    text-decoration: underline;   
+}
+main{
+    width: 80%;
+    padding-top: 20px;
+}
+#foto{
+    float: right;
+    width: 25%;
+    margin-left: 20px;
+    padding: 2px;
+    /* BORDER: TAMAÑO COLOR TIPO */
+    border: 1px rgb(74, 71, 71) solid;
+}
+#texto{
+    font-size: 25px;
+    line-height: 30px;
+    text-align: justify;
+}
+section h1{
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+#carreras{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    clear: both;
+}
+.carrera{
+    padding: 20px;
+    text-align: justify;
+}
+.carrera img{
+    width: 100%;
+}
+.carrera h4{
+    font-size: 30px;
+    padding: 20px 0;
+}
+.carrera a{
+    width: 100%;
+    background: rgb(141, 164, 65);
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #000000;
+    margin-top: 10px;
+}
+.carrera a:hover{
+    color:rgb(255, 255, 255);
+    background-color: #616b63;
+}
+aside h3{
+    font-size: 30px;
+    text-align: center;
+    clear: both;
+    padding: 20px 0;
+}
+.logos{
+    display: flex;
+}
+.logos img{
+    height: 100px;
+}
+footer{
+    background: rgb(0, 0, 0);
+    padding: 30px 0;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 10px;
+    font-size: 20px;
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Ordenamiento</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link href="CSS/ordenamiento.css" rel="stylesheet"> 
+    <script src="./JS/algoritmos.js"></script>
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+    <h1>Ordenamientos</h1>
+  </header>
+  <main>
+    <div class="container">
+    <br>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Arreglo</span>
+        <input id="arreglodesord" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      </div>
+      <select id="algoritmos" class="form-select" aria-label="Default select example">
+        <option selected>Elige un algoritmo de ordenamiento</option>
+        <option value="1">Enhanced Buuble</option>
+        <option value="2">Quick Short</option>
+        <option value="3">Insertion Short</option>
+        <option value="4">Merge Short</option>
+        <option value="5">Selection Short</option>
+      </select>
+      <br>
+      <button type="button" class="btn btn-success" onclick="obtieneArreglo()">Ordenar</button>
+    </div>
+  <br>
+    <div id="resultado" class="arreglo">
+
+    </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,300,700,900");
+@import url("https://use.fontawesome.com/relase/v6.5.1/css/all.css");
+
+body{
+    height: 100vh;
+    margin: 0;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    font-family: Roboto, sans-serif;
+    overflow: hidden;
+}
+
+img{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    transform: translateY(20%); scale: (1.6);
+    z-index: -1;
+    transition: transform .3s;
+    animation: anim 20s ease-out infinite 0s;
+}
+
+@keyframes anim{
+    0%,
+    100%{
+        transform: translateX(0%) translateY(20%) scale(1.6);
+    }
+
+    50%{
+        transform: translateX(10%) translateY(25%) scale(1.6);
+    }
+}
+
+header{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav{
+    width: 30px;
+    height: 30px;
+    background: #565c73;
+    border-radius: 2px;
+    box-shadow: 
+        0 -10px 0 #565c73,
+        0 10px 0 #565c73;
+}
+
+.content{
+    text-align: center;
+    color: gray;
+    transform: translateY(20%);
+}
+
+h1{
+    font-size: 10em;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: -10px;
+    opacity: 0.6;
+}
+
+h2{
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 6px;
+    opacity: 0.9;
+}
+
+p{
+    font-size: 1em;
+    font-weight: 300;
+    margin-bottom: 100px;
+    opacity: 0.7;
+}
+
+a{
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: 300;
+    text-transform: uppercase;
+    border: 1px solid black;
+    padding: 8px 14px;
+    border-radius: 4px;
+    opacity: 0.4;
+    cursor: pointer;
+    color: black;
+}
