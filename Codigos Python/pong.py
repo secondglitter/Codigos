@@ -1,5 +1,6 @@
 import pygame
 import sys
+import random
 
 pygame.init()
 
@@ -11,21 +12,25 @@ BALL_SPEED = 5
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Pong Game")
 
-ball_x, ball_y = WIDTH // 2, HEIGHT // 2
-ball_speed_x, ball_speed_y = BALL_SPEED, BALL_SPEED
-
 paddle_width, paddle_height = 15, 60
 left_paddle_x, right_paddle_x = 10, WIDTH - 25
 left_paddle_y, right_paddle_y = HEIGHT // 2 - paddle_height // 2, HEIGHT // 2 - paddle_height // 2
 paddle_speed = 7
 score_left, score_right = 0, 0
 
-# Font for display the score
-
+# Font for displaying the score
 font = pygame.font.Font(None, 36)
 
 def reset_ball():
-    return WIDTH // 2, HEIGHT // 2, BALL_SPEED, BALL_SPEED
+    ball_x = WIDTH // 2
+    ball_y = HEIGHT // 2
+    # Randomly choose initial direction for the ball
+    ball_speed_x = BALL_SPEED * random.choice([-1, 1])
+    ball_speed_y = BALL_SPEED * random.choice([-1, 1])
+    return ball_x, ball_y, ball_speed_x, ball_speed_y
+
+# Initial position of the ball
+ball_x, ball_y, ball_speed_x, ball_speed_y = reset_ball()
 
 # Game loop
 while True:
