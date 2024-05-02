@@ -1,0 +1,19 @@
+{
+    "intentos":[
+        {
+            "tema": "saludo",
+            "opciones": ["Hola", "Buenos días", "Buenas tardes"],
+            "respuestas" : ["Hola ¿Como puedo ayudarte?", ""]
+        },
+        {
+            "tema": "saludo_2",
+            "opciones": ["qué tal", "como estás", "como estas", "como te va"],
+            "respuestas": ["Bien ¿en qué puedo ayudarte?", "Todo bien ¿en qué puedo ayudarte"]
+        },
+        {
+            "tema": "",
+            "opciones": [],
+            "respuestas": []
+        }
+    ]
+}
