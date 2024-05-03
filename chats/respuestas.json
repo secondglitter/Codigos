@@ -1,10 +1,17 @@
-
 {
-    "respuestas": {
-      "Hola": ["¡Hola! Soy ChatGPT, ¿cómo puedo ayudarte?", "¡Hola! ¿En qué puedo asistirte hoy?", "¡Hola, humano! ¿Qué necesitas?"],
-      "Como estas": ["Como soy un programa de computadora, no tengo sentimientos, pero estoy aquí para ayudarte.", "Estoy aquí y listo para ayudarte en lo que necesites."],
-      "Adios": ["¡Hasta luego! Si necesitas algo más, aquí estaré.", "¡Adiós! No dudes en volver si necesitas ayuda."],
-      "default": ["Lo siento, no comprendo eso.", "No estoy seguro de entender. ¿Podrías explicar más?", "Parece que estoy teniendo dificultades para entender. ¿Podrías reformular tu pregunta?"]
-    }
-  }
+  "respuestas": [
+      {
+          "tema": "saludo",
+          "intentos": ["Hola","hola", "buenos días", "buenas tardes"],
+          "respuestas" : ["Hola ¿Cómo puedo ayudarte?"]
+      },
+      {
+          "tema": "saludo_2",
+          "intentos": ["qué tal", "como estás", "como estas", "como te va"],
+          "respuestas": ["Bien ¿En qué puedo ayudarte?", "Todo bien ¿En qué puedo ayudarte?"]
+      }
+  ]
+}
+
+
   

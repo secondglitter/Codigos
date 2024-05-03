@@ -12,9 +12,8 @@ import random
 nltk.download('punkt')
 nltk.download('wordnet')
 
-with open('chats/opciones.json', 'r', encoding='utf-8') as file:
-    data = json.load(file)
-    intentos = data['intentos']
+data_file = open('opciones.json', 'r', encoding='utf-8').read()
+intents = json.loads(data_file)
 
 lemmatizer = WordNetLemmatizer()
 
@@ -24,19 +23,16 @@ documents = []
 ignore_words = ['?', '!']
 
 # Recorre cada intento en la lista de intentos
-for intento in intentos:
-    tema = intento['tema']
-    opciones = intento['opciones']
-    respuestas = intento['respuestas']
-    # Agrega el tema a la lista de clases si no está presente
-    if tema and tema not in classes:
-        classes.append(tema)
-    for opcion in opciones:
-        # Tokeniza las palabras en cada opción y las agrega a la lista de palabras
-        w = nltk.word_tokenize(opcion)
+for intent in intents['intents']:
+    for pattern in intent['patterns']:
+    # Tokeniza las palabras en cada patron y las agrega a la lista de palabras
+        w = nltk.word_tokenize(pattern)
         words.extend(w)
-        # Agrega el par (opción, tema) a la lista de documentos
-        documents.append((w, tema))
+        # Agrega el par (patron, etiqueta) a la lista de documentos
+        documents.append((w, intent['tag']))
+        # Si la etiqueta no esta en la lista de clases, la agrega
+        if intent['tag'] not in classes:
+            classes.append(intent['tag'])
 
 # Lematiza las palabras y las convierte en minúsculas, excluyendo las palabras ignoradas
 words = [lemmatizer.lemmatize(w.lower()) for w in words if w not in ignore_words]
@@ -67,8 +63,11 @@ for doc in documents:
 random.shuffle(training)
 
 # Divide el conjunto de entrenamiento en características (train_x) y etiquetas (train_y)
-train_x = np.array([row[0] for row in training])
-train_y = np.array([row[1] for row in training])
+train_x = [row[0] for row in training]
+train_y = [row[1] for row in training]
+
+train_x = np.array(train_x)
+train_y = np.array(train_y)
 
 # Crea el modelo de red neuronal
 model = Sequential()
@@ -89,9 +88,9 @@ sgd = SGD(learning_rate=lr_schedule, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
 # Entrena el modelo con el conjunto de entrenamiento
-hist = model.fit(train_x, train_y, epochs=200, batch_size=5, verbose=1)
+hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
 
 # Guarda el modelo entrenado en un archivo h5
-model.save('chatbot_model.h5')
+model.save('chatbot_model.h5', hist)
 
 print('Modelo creado y guardado como chatbot_model.h5')

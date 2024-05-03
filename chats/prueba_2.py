@@ -1,37 +1,25 @@
 import json
 import random
 
+# Cargar el JSON con las respuestas del bot
 def cargar_respuestas():
-    with open("chats/respuestas.json", "r", encoding="utf-8") as file:
+    with open("respuestas.json", "r") as file:
         return json.load(file)
 
-def manejar_respuesta_invalida():
-    mensajes_error = ["Lo siento, no comprendo eso.", "No estoy seguro de entender. ¿Podrías explicar más?", "Parece que estoy teniendo dificultades para entender. ¿Podrías reformular tu pregunta?"]
-    print(random.choice(mensajes_error))
+# Función para obtener una respuesta basada en la entrada del usuario
+def obtener_respuesta(entrada, data):
+    for respuesta in data["respuestas"]:
+        if entrada.lower() in respuesta["intentos"]:
+            return random.choice(respuesta["respuestas"])
+    return "Lo siento, no entendí eso. ¿Podrías repetirlo?"
 
-def chat():
-    # Cargar respuestas desde el archivo JSON
-    respuestas = cargar_respuestas()["respuestas"]
-
-    # Saludo inicial
-    print("¡Hola! Soy ChatGPT, un chatbot basado en el modelo de lenguaje GPT-3.5 de OpenAI. ¿En qué puedo ayudarte hoy?")
-
-    # Bucle de conversación
+# Loop principal del chatbot
+def main():
+    data = cargar_respuestas()
     while True:
-        # Obtener la entrada del usuario
-        mensaje_usuario = input("Tú: ").capitalize()
+        entrada_usuario = input("Tú: ")
+        respuesta_bot = obtener_respuesta(entrada_usuario, data)
+        print("Bot:", respuesta_bot)
 
-        # Salir si el usuario escribe 'Adiós'
-        if mensaje_usuario == "Adiós":
-            print(random.choice(respuestas["Adiós"]))
-            break
-
-        # Buscar una respuesta adecuada
-        if mensaje_usuario in respuestas:
-            print(random.choice(respuestas[mensaje_usuario]))
-        else:
-            manejar_respuesta_invalida()
-
-# Iniciar el chat
 if __name__ == "__main__":
-    chat()
+    main()
