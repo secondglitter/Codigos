@@ -1,17 +1,26 @@
 {
-  "respuestas": [
-      {
-          "tema": "saludo",
-          "intentos": ["Hola","hola", "buenos días", "buenas tardes"],
-          "respuestas" : ["Hola ¿Cómo puedo ayudarte?"]
-      },
-      {
-          "tema": "saludo_2",
-          "intentos": ["qué tal", "como estás", "como estas", "como te va"],
-          "respuestas": ["Bien ¿En qué puedo ayudarte?", "Todo bien ¿En qué puedo ayudarte?"]
-      }
-  ]
-}
-
+    "respuestas": [
+        {
+            "tema": "saludo",
+            "intentos": ["hola", "buenos dias", "buenas tardes"],
+            "respuestas" : ["Hola ¿Cómo puedo ayudarte?", "¡Saludos! ¿En qué puedo asistirte?"]
+        },
+        {
+            "tema": "saludo_2",
+            "intentos": ["que tal", "como estas", "como te va"],
+            "respuestas": ["Bien ¿En qué puedo ayudarte?", "Todo bien ¿En qué puedo ayudarte?", "¡Hola! ¿Qué necesitas?"]
+        },
+        {
+            "tema": "despedida",
+            "intentos": ["adios", "hasta luego", "nos vemos"],
+            "respuestas": ["¡Hasta luego! Que tengas un buen día.", "Nos vemos pronto. ¡Cuídate!"]
+        },
+        {
+            "tema": "gratitud",
+            "intentos": ["gracias", "muchas gracias", "agradecido"],
+            "respuestas": ["¡De nada! Estoy aquí para ayudarte.", "¡No hay de qué! Siempre dispuesto a colaborar."]
+        }
+    ]
+  }
 
   
