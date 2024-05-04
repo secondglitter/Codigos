@@ -2,25 +2,135 @@
     "respuestas": [
         {
             "tema": "saludo",
-            "intentos": ["hola", "buenos dias", "buenas tardes"],
-            "respuestas" : ["Hola ¿Cómo puedo ayudarte?", "¡Saludos! ¿En qué puedo asistirte?"]
+            "intentos": ["hola", "buenos dias", "buenas tardes", "qué tal", "cómo estás"],
+            "respuestas" : ["Hola ¿Cómo puedo ayudarte?", "¡Saludos! ¿En qué puedo asistirte?", "¡Hola! ¿Qué necesitas?"]
         },
         {
             "tema": "saludo_2",
-            "intentos": ["que tal", "como estas", "como te va"],
-            "respuestas": ["Bien ¿En qué puedo ayudarte?", "Todo bien ¿En qué puedo ayudarte?", "¡Hola! ¿Qué necesitas?"]
+            "intentos": ["que tal", "como estas", "como te va", "bienvenido", "qué hay"],
+            "respuestas": ["Bien ¿En qué puedo ayudarte?", "Todo bien ¿En qué puedo ayudarte?", "¡Hola! ¿Qué necesitas?", "Hola, estoy aquí para ayudarte. ¿En qué puedo asistirte?"]
         },
         {
             "tema": "despedida",
-            "intentos": ["adios", "hasta luego", "nos vemos"],
-            "respuestas": ["¡Hasta luego! Que tengas un buen día.", "Nos vemos pronto. ¡Cuídate!"]
+            "intentos": ["adios", "hasta luego", "nos vemos", "hasta pronto", "que tengas un buen día"],
+            "respuestas": ["¡Hasta luego! Que tengas un buen día.", "Nos vemos pronto. ¡Cuídate!", "Adiós, ¡que tengas un excelente día!"]
         },
         {
             "tema": "gratitud",
-            "intentos": ["gracias", "muchas gracias", "agradecido"],
-            "respuestas": ["¡De nada! Estoy aquí para ayudarte.", "¡No hay de qué! Siempre dispuesto a colaborar."]
+            "intentos": ["gracias", "muchas gracias", "agradecido", "te lo agradezco", "mil gracias"],
+            "respuestas": ["¡De nada! Estoy aquí para ayudarte.", "¡No hay de qué! Siempre dispuesto a colaborar.", "¡Con gusto! Estoy para servirte."]
+        },
+        {
+            "tema": "alquiler de yates",
+            "intentos": ["como puedo alquilar un yate", "alquilar un yate", "rentar un yate", "alquiler de barcos", "yates disponibles"],
+            "respuestas": ["Para alquilar un yate, puedes mandar un mensaje o marcar al +52 998 147 9260 o da click a este link (LANDING PAGE)", "Puedes comenzar el proceso de alquiler enviándonos un mensaje o llamando al +52 998 147 9260."]
+        },
+        {
+            "tema": "tipos de yates",
+            "intentos": ["Que tipos de yates estan disponibles para alquiler", "yates deportivos", "yates de lujo", "opciones de alquiler", "variedad de yates"],
+            "respuestas": ["Ofrecemos una variedad de yates para alquiler, desde yates deportivos hasta yates de lujo. Visita nuestra sección VNV Yachts (LINK LANDING PAGE)", "En nuestra flota encontrarás desde yates deportivos hasta yates de lujo, todos listos para tu próxima aventura."]
+        },
+        {
+            "tema": "requisitos de alquiler",
+            "intentos": ["cuales son los requisitos para alquilar un yate", "requisitos de renta de barcos", "condiciones de alquiler", "documentos necesarios"],
+            "respuestas": ["Necesitas ser mayor de edad, presentar una identificación válida, y cumplir con nuestras políticas de seguridad y fianza. Para más información, contáctanos.", "Los requisitos incluyen ser mayor de edad, tener una identificación válida y cumplir con nuestras políticas de seguridad y fianza."]
+        },
+        {
+            "tema": "propiedades en venta",
+            "intentos": ["que propiedades estan actualmente en venta", "que propiedades estan en venta", "casas en venta", "terrenos disponibles", "catálogo de inmuebles"],
+            "respuestas": ["Tenemos una variedad de propiedades y terrenos disponibles. Visita nuestra sección VNV Real Estate para ver las últimas ofertas y ubicaciones (LINK LANDING PAGE)", "Nuestro catálogo incluye diversas propiedades y terrenos. Descubre las últimas ofertas en nuestra sección VNV Real Estate."]
+        },
+        {
+            "tema": "agendar una visita",
+            "intentos": ["puedo agendar una visita a una propiedad", "cita para ver una casa", "visita guiada", "ver propiedades en persona", "inspección de inmuebles"],
+            "respuestas": ["Claro, para agendar una visita a nuestras propiedades, por favor proporciona tus datos de contacto y el agente encargado se pondrá en contacto contigo. (LINK LANDING PAGE)", "¡Por supuesto! Proporciona tus datos y te ayudaremos a programar una visita."]
+        },
+        {
+            "tema": "pasos para comprar una propiedad",
+            "intentos": ["cuales son los pasos para comprar una propiedad", "comprar una casa", "proceso de compra de inmuebles", "adquirir una propiedad", "pasos para ser propietario"],
+            "respuestas": ["El proceso de compra incluye la selección de la propiedad, la verificación financiera, la firma del contrato, y la finalización de la venta. Nuestros asesores pueden guiarte a través de cada paso.", "Los pasos típicos para comprar una propiedad incluyen la selección, verificación financiera, firma de contrato y finalización de la venta. Estamos aquí para ayudarte en cada paso."]
+        },
+        {
+            "tema": "alquiler de slip para yates",
+            "intentos": ["como puedo alquilar un slip para mi yate", "alquiler de amarres", "espacios para yates", "alquiler de muelle", "sitios para atracar"],
+            "respuestas": ["Para alquilar un slip en VNV Marina, por favor visita nuestra página web o contáctanos directamente para verificar la disponibilidad y los precios. (LINK LANDING PAGE)", "Puedes alquilar un slip para tu yate visitando nuestra página web o contactándonos directamente."]
+        },
+        {
+            "tema": "verificion del estado de mi embarcacion",
+            "intentos": ["como puedo verficar el estado de mi embarcacion", "estado de mi yate", "chequeo de barco", "revisión de la embarcación", "informe de estado del yate"],
+            "respuestas": ["Si tu yate está en uno de nuestros slips, puedes solicitar un reporte del estado actual contactándonos +52 998 109 5795", "Para verificar el estado de tu embarcación, simplemente contáctanos y estaremos encantados de proporcionarte un informe actualizado."]
+        },
+        {
+            "tema": "mantenimiento o reparacion de yates",
+            "intentos": ["ofrecen servicios de mantenimiento o reparacion de yates", "reparar mi barco", "mantenimiento náutico", "servicio técnico para embarcaciones", "arreglo de yates"],
+            "respuestas": ["Sí, en nuestro astillero ofrecemos una gama completa de servicios de mantenimiento y reparación. Contacta con nosotros para más detalles o para programar una cita, +52 998 109 5795", "¡Por supuesto! Contamos con un equipo experto para ofrecerte servicios completos de mantenimiento y reparación. Llámanos para programar una cita."]
+        },
+        {
+            "tema": "hablar con un asesor",
+            "intentos": ["quisiera hablar con un asesor", "me prodia contactar con un asesor", "consultar con un experto", "asesoramiento personalizado", "hablar con un consultor"],
+            "respuestas": ["Entiendo, voy a ponerte en contacto con uno de nuestros asesores. Por favor, proporciona tu nombre y número de teléfono, y te llamaremos lo antes posible. (LINK DE GOOGLE FORMS) VNV YACHTS", "¡Claro! Déjanos tus datos y nos pondremos en contacto contigo lo antes posible para ayudarte con tus consultas."]
+        },
+        {
+            "tema": "tour o paquetes de yates",
+            "intentos": ["ofrecen tours o paquetes especiales con los yates", "paquetes turísticos", "excursiones en barco", "paseos en yate", "viajes marítimos"],
+            "respuestas": ["Sí, ofrecemos paquetes personalizados que incluyen tours, eventos especiales y más. Puedes consultar los detalles y opciones disponibles en nuestra sección VNV Yachts o contactarnos directamente. (LINK LANDING PAGE)", "¡Exacto! Tenemos paquetes especiales que incluyen tours y eventos. Visita nuestra sección VNV Yachts para más información."]
+        },
+        {
+            "tema": "restriccion de navegacion de yates",
+            "intentos": ["existen restricciones sobre donde puedo navergar con el yate alquilado", "zonas de navegación permitidas", "rutas recomendadas", "áreas restringidas", "mapa de navegación"],
+            "respuestas": ["Las zonas de navegación dependen del tipo de yate y las condiciones del contrato de alquiler. Te invitamos a discutir tus planes de navegación con nosotros para ofrecerte la mejor experiencia posible. (LINK LANDING PAGE)", "Para garantizar tu seguridad y cumplir con nuestras políticas, las áreas de navegación pueden variar según el contrato de alquiler. Contáctanos para obtener detalles específicos."]
+        },
+        {
+            "tema": "contratacion de personal y capitán",
+            "intentos": ["puedo contratar un capitan y personal para el yate alquilado", "servicio de tripulación", "contratar marinero", "capitán para mi yate", "tripulación para embarcación"],
+            "respuestas": ["Sí, ofrecemos servicios completos de tripulación para tu alquiler. Tu renta de yate ya incluye un capitán y un marinero.", "¡Por supuesto! Tu alquiler de yate incluye un capitán y un marinero para que puedas relajarte y disfrutar."]
+        },
+        {
+            "tema": "facilidades de pago",
+            "intentos": ["ofrecen financiamiento p facilidades de pago para la compra de propiedades", "planes de pago", "crédito inmobiliario", "opciones de financiamiento", "pagos flexibles"],
+            "respuestas": ["Tenemos opciones de financiamiento disponibles para algunos de nuestros bienes inmuebles. Por favor contacta a un asesor en VNV Real Estate para obtener más información sobre las opciones de financiamiento. (Link landing page)", "¡Claro! Podemos ofrecerte opciones de financiamiento para facilitar la compra de tu propiedad. Contacta a nuestro equipo de VNV Real Estate para más detalles."]
+        },
+        {
+            "tema": "informacion sobre propiedades",
+            "intentos": ["como puedo obtener mas informacion sobre las especificaciones de una propiedad", "detalles de la casa", "características del inmueble", "información técnica de la propiedad", "especificaciones de la vivienda"],
+            "respuestas": ["Para obtener detalles específicos sobre nuestras propiedades, puedes descargar la ficha técnica directamente desde nuestra página web o solicitarla a través de nuestro equipo de ventas. (Link landing page)", "Puedes obtener información detallada sobre nuestras propiedades descargando la ficha técnica desde nuestro sitio web o contactando a nuestro equipo de ventas."]
+        },
+        {
+            "tema": "garantias o seguros de una propiedad",
+            "intentos": ["que garantias o seguros estan disponibles al comprar una propiedad", "protección de inversión", "seguro de hogar", "garantía de propiedad", "cobertura de bienes raíces"],
+            "respuestas": ["Ofrecemos diversas opciones de seguros y garantías para proteger tu inversión. Discute tus necesidades con nuestro equipo para obtener una solución personalizada. (Link de forms)", "Tu inversión está protegida con nuestras opciones de seguros y garantías. Contáctanos para encontrar la mejor solución para ti."]
+        },
+        {
+            "tema": "medidas de seguridad",
+            "intentos": ["que medidas de seguridad implementan en las marinas", "seguridad en el puerto deportivo", "protección de embarcaciones", "normas de seguridad náutica", "vigilancia en la marina"],
+            "respuestas": ["La seguridad es una prioridad en VNV Marina. Contamos con vigilancia las 24 horas, cámaras de seguridad y personal entrenado para garantizar la seguridad de tus embarcaciones.", "En VNV Marina, la seguridad es primordial. Tenemos vigilancia las 24 horas, cámaras de seguridad y personal capacitado para proteger tu embarcación."]
+        },
+        {
+            "tema": "cancelacion o modificacion de contrato de alquiler de slip",
+            "intentos": ["como puedo cancelar o modificar mi contrato de alquiler de slip", "cambiar reserva de amarre", "modificar contrato de marina", "cancelar alquiler de muelle", "ajustar reserva de slip"],
+            "respuestas": ["Para cancelar o modificar tu contrato de alquiler, contacta a nuestro equipo de servicio al cliente con al menos 30 días de anticipación para procesar tu solicitud.", "Si necesitas modificar o cancelar tu contrato de alquiler de slip, comunícate con nuestro equipo de servicio al cliente con al menos 30 días de anticipación."]
+        },
+        {
+            "tema": "quejas o sugerencias",
+            "intentos": ["donde puedo presentar una queja o sugerencia", "comunicar comentarios", "enviar feedback", "opiniones sobre el servicio", "dar retroalimentación"],
+            "respuestas": ["Valoramos tus comentarios. Por favor, utiliza nuestro formulario de contacto en la página web o envíanos un correo electrónico directamente con tu queja o sugerencia. (Link de google forms)", "Tu opinión es importante para nosotros. Envíanos tus quejas o sugerencias a través de nuestro formulario en línea o por correo electrónico."]
+        },
+        {
+            "tema": "emergencia con el yate o propiedad",
+            "intentos": ["que debo de hacer en caso de emergencia con mi yate o propiedad", "situación de emergencia", "urgencia en la embarcación", "problema con la propiedad", "incidente crítico"],
+            "respuestas": ["En caso de emergencia, contáctanos inmediatamente a través de nuestros números de teléfono de emergencia disponibles 24/7 o utiliza las herramientas de contacto rápido en nuestra página web.", "Ante cualquier emergencia con tu yate o propiedad, no dudes en contactarnos de inmediato a través de nuestros números de emergencia disponibles las 24 horas."]
+        },
+        {
+            "tema": "contacto",
+            "intentos": ["como puedo contactarlos", "necesito comunicarme", "hablar con servicio al cliente", "información de contacto", "datos para llamar"],
+            "respuestas": ["Puedes dejarnos tus datos y tu solicitud en el siguiente link y nosotros te contactaremos lo antes posible, igualmente te dejamos e directorio: (Link de forms) NUMERO PARA YATES (+52 998 147 9260) NÚMERO PARA REAL ESTATE (998 116 1360) NÚMERO PARA MARINA VNV (+52 998 109 5795) NÚMERO PARA VNV ZONA HOTELERA (+52 998 147 9260) NÚMERO PARA EL CORPORATIVO OFICINAS CENTRALES ( 9988497258)", "Estamos disponibles para atenderte. Puedes dejarnos tus datos en nuestro formulario en línea y nos pondremos en contacto contigo lo antes posible para ayudarte. También puedes llamarnos a los siguientes números: YATES (+52 998 147 9260), REAL ESTATE (998 116 1360), MARINA VNV (+52 998 109 5795), ZONA HOTELERA (+52 998 147 9260), CORPORATIVO OFICINAS CENTRALES (9988497258)"]
+        },
+        {
+            "tema": "",
+            "intentos": [""],
+            "respuestas": [""]
         }
     ]
-  }
+}
 
   

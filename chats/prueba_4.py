@@ -4,7 +4,7 @@ import random
 import time
 
 # Carga el JSON
-with open('respuestas.json') as f:
+with open('respuestas.json', encoding='utf-8') as f:
     json_data = json.load(f)
 
 def get_response(user_input):
@@ -51,7 +51,7 @@ if prompt := st.chat_input("¿Cómo puedo ayudarte?"):
     response = get_response(prompt)
     if response:
         with st.chat_message("assistant"):
-            st.markdown(response)
+            st.markdown(f'{response}')
             # Hacer que la ventana de Streamlit se desplace hacia abajo después de la respuesta del bot
             st.markdown('<div style="visibility: hidden;">.</div>', unsafe_allow_html=True)
         st.session_state.messages.append({"role": "assistant", "content": response})
