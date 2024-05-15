@@ -1,0 +1,173 @@
+@import url("https://use.fontawesome.com/releases/v6.5.1/cc/all.css");
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background: #efefef;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card-real {
+    position: relative;
+    height: 400px;
+    width: 290px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.front-face, .back-face,
+.front-face-1, .back-face-1,
+.front-face-2, .back-face-2,
+.front-face-3, .back-face-3,
+.front-face-4, .back-face-4 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform .7s
+    cubic-bezier(.4,.2,.2,1);
+}
+
+.front-face, .back-face {
+    background: linear-gradient(rgba(0,0,0, .2), rgba(0,0,0.2)),
+    url(https://vnvgroup.com/wp-content/uploads/2023/04/Empresa-Madorsa.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.front-face-1 , .back-face-1 {
+    background: linear-gradient(rgba(0,0,0, .2), rgba(0,0,0.2)),
+    url(https://vnvgroup.com/wp-content/uploads/2023/07/Foto-Delfines-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.front-face-2 , .back-face-2 {
+    background: linear-gradient(rgba(0,0,0, .2), rgba(0,0,0.2)),
+    url(https://vnvgroup.com/wp-content/uploads/2022/05/Fuentes-de-la-Alegria-3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.front-face-3 , .back-face-3 {
+    background: linear-gradient(rgba(0,0,0, .2), rgba(0,0,0.2)),
+    url(https://vnvgroup.com/wp-content/uploads/2022/05/Fuentes-de-la-Alegria-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.front-face-4 , .back-face-4 {
+    background: linear-gradient(rgba(0,0,0, .2), rgba(0,0,0.2)),
+    url(https://vnvgroup.com/wp-content/uploads/2023/04/Empresa-Madorsa.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.contents{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    perspective: 100px;
+    transform: 
+    translateY(-50%) translateZ(60px) scale(.94);
+}
+
+.back-face, .back-face-1, .back-face-2, .back-face-3, .back-face-4{
+    transform: rotateY(180deg);
+}
+
+.front-p {
+    font-size: 28px;
+    margin: 0;
+}
+
+.bottom-bar::after {
+    content: '';
+    display: block;
+    background: white;
+    left: 0;
+    right: 0;
+    height: 2px;
+    width: 150px;
+    margin-inline: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.front-face, .front-face-1, .front-face-2, .front-face-3, .front-face-4 {
+    transform: rotateY(-180deg);
+}
+
+.back-face, .back-face-1, .back-face-2, .back-face-3, .back-face-4 {
+    transform: rotateY(0deg);
+    background: 
+    linear-gradient(45deg, #0e0e0e 0%, #5a5a5a 100%);
+}
+
+.back-h2 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.front-face, .front-face-1, .front-face-2, .front-face-3, .front-face-4 {
+    transform: rotateY(0deg);
+}
+
+.back-face, .back-face-1, .back-face-2, .back-face-3, .back-face-4 {
+    transform: rotateY(180deg);
+}
+
+.card-real:hover>.front-face,
+.card-real:hover > .front-face-1,
+.card-real:hover>.front-face-2,
+.card-real:hover > .front-face-3,
+.card-real:hover>.front-face-4 {
+    transform: rotateY(-180deg);
+}
+
+.card-real:hover>.back-face, 
+.card-real:hover > .back-face-1,
+.card-real:hover>.back-face-2,
+.card-real:hover > .back-face-3,
+.card-real:hover>.back-face-4 {
+    transform: rotateY(0deg);
+}
+
+.action {
+    display: inline-flex;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    align-items: center;
+    gap: 0.25rem;
+    background-color: #2563EB;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.action span {
+    transition: .3s ease;
+}
+
+.action:hover span {
+    transform: translateX(4px);
+}
