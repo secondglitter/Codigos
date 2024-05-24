@@ -1,3 +1,9 @@
+body{
+  justify-content: center;
+  align-items: center;
+  display: flex
+}
+
 .container {
     position: relative;
     width: 100%;

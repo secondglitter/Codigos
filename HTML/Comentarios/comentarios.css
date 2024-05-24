@@ -1,0 +1,60 @@
+.com-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.com-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.com-des {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-comment {
+  display: none;
+  width: 100%;
+  max-width: 600px; /* Ajusta el tamaño máximo de las tarjetas */
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 10px;
+}
+
+.carousel-comment.active {
+  display: block;
+}
+
+.carousel-arrow {
+  cursor: pointer;
+  font-size: 2rem;
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-arrow.left {
+  left: 10px;
+}
+
+.carousel-arrow.right {
+  right: 10px;
+}
